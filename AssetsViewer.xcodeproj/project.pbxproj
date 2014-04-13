@@ -22,6 +22,14 @@
 		F9ABCAB018F9192900C1DB4A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABCA8F18F9192900C1DB4A /* UIKit.framework */; };
 		F9ABCAB818F9192900C1DB4A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9ABCAB618F9192900C1DB4A /* InfoPlist.strings */; };
 		F9ABCABA18F9192900C1DB4A /* AssetsViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABCAB918F9192900C1DB4A /* AssetsViewerTests.m */; };
+		F9ABCAC818F919E300C1DB4A /* AssetGroupData.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABCAC718F919E300C1DB4A /* AssetGroupData.m */; };
+		F9ABCACC18F91A5700C1DB4A /* AssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABCACB18F91A5700C1DB4A /* AssetManager.m */; };
+		F9ABCAD018F91B3200C1DB4A /* CoreDataMngr.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABCACF18F91B3200C1DB4A /* CoreDataMngr.m */; };
+		F9ABCAD218F91F2200C1DB4A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9ABCAD118F91F2200C1DB4A /* CoreData.framework */; };
+		F9ABCAD518F92B5900C1DB4A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABCAD418F92B5900C1DB4A /* RootViewController.m */; };
+		F9ABCAD818F92CF800C1DB4A /* AssetsViewer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9ABCAD618F92CF800C1DB4A /* AssetsViewer.xcdatamodeld */; };
+		F9ABCAE118F9526000C1DB4A /* InageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABCAE018F9526000C1DB4A /* InageInfo.m */; };
+		F9ABCAE418F9769400C1DB4A /* ImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ABCAE318F9769400C1DB4A /* ImageTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,20 @@
 		F9ABCAB518F9192900C1DB4A /* AssetsViewerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AssetsViewerTests-Info.plist"; sourceTree = "<group>"; };
 		F9ABCAB718F9192900C1DB4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F9ABCAB918F9192900C1DB4A /* AssetsViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetsViewerTests.m; sourceTree = "<group>"; };
+		F9ABCAC618F919E300C1DB4A /* AssetGroupData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetGroupData.h; sourceTree = "<group>"; };
+		F9ABCAC718F919E300C1DB4A /* AssetGroupData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetGroupData.m; sourceTree = "<group>"; };
+		F9ABCACA18F91A5700C1DB4A /* AssetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetManager.h; sourceTree = "<group>"; };
+		F9ABCACB18F91A5700C1DB4A /* AssetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetManager.m; sourceTree = "<group>"; };
+		F9ABCACE18F91B3200C1DB4A /* CoreDataMngr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataMngr.h; sourceTree = "<group>"; };
+		F9ABCACF18F91B3200C1DB4A /* CoreDataMngr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataMngr.m; sourceTree = "<group>"; };
+		F9ABCAD118F91F2200C1DB4A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F9ABCAD318F92B5900C1DB4A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		F9ABCAD418F92B5900C1DB4A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		F9ABCAD718F92CF800C1DB4A /* AssetsViewer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AssetsViewer.xcdatamodel; sourceTree = "<group>"; };
+		F9ABCADF18F9526000C1DB4A /* InageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InageInfo.h; path = ../InageInfo.h; sourceTree = "<group>"; };
+		F9ABCAE018F9526000C1DB4A /* InageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InageInfo.m; path = ../InageInfo.m; sourceTree = "<group>"; };
+		F9ABCAE218F9769400C1DB4A /* ImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTableViewCell.h; sourceTree = "<group>"; };
+		F9ABCAE318F9769400C1DB4A /* ImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9ABCAD218F91F2200C1DB4A /* CoreData.framework in Frameworks */,
 				F9ABCA8E18F9192900C1DB4A /* CoreGraphics.framework in Frameworks */,
 				F9ABCA9018F9192900C1DB4A /* UIKit.framework in Frameworks */,
 				F9ABCA8C18F9192900C1DB4A /* Foundation.framework in Frameworks */,
@@ -103,6 +126,7 @@
 		F9ABCA8A18F9192900C1DB4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9ABCAD118F91F2200C1DB4A /* CoreData.framework */,
 				F9ABCA8B18F9192900C1DB4A /* Foundation.framework */,
 				F9ABCA8D18F9192900C1DB4A /* CoreGraphics.framework */,
 				F9ABCA8F18F9192900C1DB4A /* UIKit.framework */,
@@ -114,14 +138,27 @@
 		F9ABCA9118F9192900C1DB4A /* AssetsViewer */ = {
 			isa = PBXGroup;
 			children = (
+				F9ABCADF18F9526000C1DB4A /* InageInfo.h */,
+				F9ABCAE018F9526000C1DB4A /* InageInfo.m */,
+				F9ABCACA18F91A5700C1DB4A /* AssetManager.h */,
+				F9ABCACB18F91A5700C1DB4A /* AssetManager.m */,
+				F9ABCAC618F919E300C1DB4A /* AssetGroupData.h */,
+				F9ABCAC718F919E300C1DB4A /* AssetGroupData.m */,
 				F9ABCA9A18F9192900C1DB4A /* AppDelegate.h */,
 				F9ABCA9B18F9192900C1DB4A /* AppDelegate.m */,
 				F9ABCA9D18F9192900C1DB4A /* Main_iPhone.storyboard */,
+				F9ABCAD318F92B5900C1DB4A /* RootViewController.h */,
+				F9ABCAD418F92B5900C1DB4A /* RootViewController.m */,
+				F9ABCAE218F9769400C1DB4A /* ImageTableViewCell.h */,
+				F9ABCAE318F9769400C1DB4A /* ImageTableViewCell.m */,
 				F9ABCAA018F9192900C1DB4A /* Main_iPad.storyboard */,
 				F9ABCAA318F9192900C1DB4A /* ViewController.h */,
 				F9ABCAA418F9192900C1DB4A /* ViewController.m */,
 				F9ABCAA618F9192900C1DB4A /* Images.xcassets */,
 				F9ABCA9218F9192900C1DB4A /* Supporting Files */,
+				F9ABCACE18F91B3200C1DB4A /* CoreDataMngr.h */,
+				F9ABCACF18F91B3200C1DB4A /* CoreDataMngr.m */,
+				F9ABCAD618F92CF800C1DB4A /* AssetsViewer.xcdatamodeld */,
 			);
 			path = AssetsViewer;
 			sourceTree = "<group>";
@@ -254,7 +291,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9ABCAA518F9192900C1DB4A /* ViewController.m in Sources */,
+				F9ABCAD518F92B5900C1DB4A /* RootViewController.m in Sources */,
+				F9ABCACC18F91A5700C1DB4A /* AssetManager.m in Sources */,
 				F9ABCA9C18F9192900C1DB4A /* AppDelegate.m in Sources */,
+				F9ABCAC818F919E300C1DB4A /* AssetGroupData.m in Sources */,
+				F9ABCAD018F91B3200C1DB4A /* CoreDataMngr.m in Sources */,
+				F9ABCAD818F92CF800C1DB4A /* AssetsViewer.xcdatamodeld in Sources */,
+				F9ABCAE418F9769400C1DB4A /* ImageTableViewCell.m in Sources */,
+				F9ABCAE118F9526000C1DB4A /* InageInfo.m in Sources */,
 				F9ABCA9818F9192900C1DB4A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +524,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F9ABCAD618F92CF800C1DB4A /* AssetsViewer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F9ABCAD718F92CF800C1DB4A /* AssetsViewer.xcdatamodel */,
+			);
+			currentVersion = F9ABCAD718F92CF800C1DB4A /* AssetsViewer.xcdatamodel */;
+			path = AssetsViewer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F9ABCA8018F9192900C1DB4A /* Project object */;
 }
