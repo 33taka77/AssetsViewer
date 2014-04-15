@@ -47,12 +47,12 @@
             
             NSURL* url = [dict valueForKey:@"url"];
             //NSDictionary* metaData = [_assetsMngr getMetaDataByURL:url];
-            UIImage* thumbnail = [dict valueForKey:@"thumbnail"];
-            UIImage* aspectThumbnail = [dict valueForKey:@"aspectThumbnail"];;
+            //UIImage* thumbnail = [dict valueForKey:@"thumbnail"];
+            //UIImage* aspectThumbnail = [dict valueForKey:@"aspectThumbnail"];;
             CoreDataMngr* coreDataMngr = [CoreDataMngr sharedCoreDataMngr];
             InageInfo* imageInfo = (InageInfo*)[coreDataMngr addObjectEntityName:@"InageInfo"];
-            imageInfo.thunbnail = thumbnail;
-            imageInfo.aspectThumbnail = aspectThumbnail;
+            //imageInfo.thunbnail = thumbnail;
+            //imageInfo.aspectThumbnail = aspectThumbnail;
             imageInfo.url = [url absoluteString];
             imageInfo.groupUrl = [groupUrl absoluteString];
             imageInfo.model = [dict valueForKey:@"Model"];
@@ -70,7 +70,7 @@
             imageInfo.lensModel = [dict valueForKey:@"LensModel"];
             imageInfo.lens = [dict valueForKey:@"Lens"];
             imageInfo.dateTime = [self dateTime:[dict valueForKey:@"DateTimeOriginal"]];
-            imageInfo.sectionIdentifire = imageInfo.groupUrl;
+            imageInfo.sectionIdentifire = [self dateTimeString:imageInfo.dateTime];
             [coreDataMngr seveData];
         }
     }
@@ -110,6 +110,14 @@
     imageInfo.sectionIdentifire = imageInfo.groupUrl;
     [coreDataMngr seveData];
     */
+}
+
+- (NSString*)dateTimeString:(NSDate*)dateTime
+{
+    NSDateFormatter *inputDateFormatter = [[NSDateFormatter alloc] init];
+    [inputDateFormatter setDateFormat:@"yyyy/MM/dd"];
+    return [inputDateFormatter stringFromDate:dateTime];
+   
 }
 
 - (NSDate*)dateTime:(NSString*)dateTime
@@ -202,6 +210,7 @@
 //#warning Potentially incomplete method implementation.
     // Return the number of sections.
     //[self refresh:nil];
+    NSLog(@"fetch sections: %d",[[self.fetchedResultsController sections] count]);
     return [[self.fetchedResultsController sections] count];
 }
 
@@ -210,6 +219,7 @@
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
     id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    NSLog(@"fetch rows: %d",sectionInfo.numberOfObjects);
     return sectionInfo.numberOfObjects;
 }
 
@@ -232,7 +242,9 @@
     
     // Configure the cell...
     InageInfo* imageInfo = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.thumbnailView.image = imageInfo.thunbnail;
+    NSURL* url = [NSURL URLWithString:imageInfo.url];
+    UIImage* image = [_assetsMngr getThumbnail:url];
+    cell.thumbnailView.image = image;
     NSDateFormatter *inputDateFormatter = [[NSDateFormatter alloc] init];
     [inputDateFormatter setDateFormat:@"yyyy/MM/dd"];
     cell.DateTimeLabel.text = [inputDateFormatter stringFromDate:imageInfo.dateTime];
@@ -243,7 +255,33 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
+/*
     // Display the authors' names as section headings.
+	id <NSFetchedResultsSectionInfo> theSection = [[self.fetchedResultsController sections] objectAtIndex:section];
+    static NSDateFormatter *formatter = nil;
+    
+    if (!formatter)
+    {
+        formatter = [[NSDateFormatter alloc] init];
+        [formatter setCalendar:[NSCalendar currentCalendar]];
+        
+        NSString *formatTemplate = [NSDateFormatter dateFormatFromTemplate:@"MMMM YYYY" options:0 locale:[NSLocale currentLocale]];
+        [formatter setDateFormat:formatTemplate];
+    }
+    
+    NSInteger numericSection = [[theSection name] integerValue];
+	NSInteger year = numericSection / 1000;
+	NSInteger month = numericSection - (year * 1000);
+    
+    NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
+    dateComponents.year = year;
+    dateComponents.month = month;
+    NSDate *date = [[NSCalendar currentCalendar] dateFromComponents:dateComponents];
+    
+	NSString *titleString = [formatter stringFromDate:date];
+    
+	return titleString;
+*/
     return [[[self.fetchedResultsController sections] objectAtIndex:section] name];
 }
 

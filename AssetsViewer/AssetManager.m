@@ -455,10 +455,10 @@ static AssetManager* g_assetManager = nil;
                     [dictionary setObject:url forKey:@"url"];
                     [dictionary setObject:groupUrl forKey:@"groupUrl"];
                     [self getMetadataByAsset:asset dictionary:dictionary];
-                    UIImage* thumbnail = [self getThumbnailByAsset:asset];
-                    [dictionary setObject:thumbnail forKey:@"thumbnail"];
-                    UIImage* aspectThumbnail = [self getAspectThumbnailByAsset:asset];
-                    [dictionary setObject:aspectThumbnail forKey:@"aspectThumbnail"];
+                    //UIImage* thumbnail = [self getThumbnailByAsset:asset];
+                    //[dictionary setObject:thumbnail forKey:@"thumbnail"];
+                    //UIImage* aspectThumbnail = [self getAspectThumbnailByAsset:asset];
+                    //[dictionary setObject:aspectThumbnail forKey:@"aspectThumbnail"];
                     [_arrayOfAssetsInfo addObject:dictionary];
                 }else{
                     [self.delegate updateItemDataItemURL:url groupURL:groupUrl];
